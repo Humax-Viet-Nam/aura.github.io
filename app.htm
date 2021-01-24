@@ -1005,6 +1005,17 @@ else if(md.os()==='iPadOS')
 else if(md.os()==='AndroidOS')
 	{window.location.href='https://play.google.com/store/apps/details?id=com.humaxdigital.freeview';}
 else{
-	console.log("ABC");
-	alert('App not support for your device nay nhe');window.close();}}
+	console.log( md.mobile() );          // 'Sony'
+	console.log( md.phone() );           // 'Sony'
+	console.log( md.tablet() );          // null
+	console.log( md.userAgent() );       // 'Safari'
+	console.log( md.os() );              // 'AndroidOS'
+	console.log( md.is('iPhone') );      // false
+	console.log( md.is('bot') );         // false
+	console.log( md.version('Webkit') );         // 534.3
+	console.log( md.versionStr('Build') );       // '4.1.A.0.562'
+	console.log( md.match('playstation|xbox') )
+	alert('App not support for your device nay');
+	window.close();}
+}
 </script>
